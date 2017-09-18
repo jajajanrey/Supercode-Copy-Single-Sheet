@@ -68,6 +68,7 @@ def main(sheet_id, copy_to, service_account_json, new_name="", tab_id=0):
                 spreadsheetId=copy_to,
                 body=body).execute()
 
+            new_result["title"] = new_name
             result.update(new_result)
         except Exception:
             pass
