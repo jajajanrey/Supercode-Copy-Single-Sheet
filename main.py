@@ -64,9 +64,11 @@ def main(sheet_id, copy_to, service_account_json, new_name="", tab_id=0):
             "requests": renameSheet(tab_id, new_name)
         }
         try:
-            result = service.spreadsheets().batchUpdate(
+            new_result = service.spreadsheets().batchUpdate(
                 spreadsheetId=copy_to,
                 body=body).execute()
+
+            result.update(new_result)
         except Exception:
             pass
 
