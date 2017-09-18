@@ -5,7 +5,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from apiclient.discovery import build
 
 SCOPES = ['https://www.googleapis.com/auth/drive']
-CREDENTIALS_PATH = './tmp/credentials.json'
+CREDENTIALS_PATH = '/tmp/credentials.json'
 
 
 def get_credentials(credentials):
